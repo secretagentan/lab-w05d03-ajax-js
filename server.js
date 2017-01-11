@@ -15,6 +15,21 @@ app.use(express.static(__dirname + '/public'));
 // Data
 var challenges = require('./lib/challenges');
 // GET '/challenges' =>
+var storedList = challenges.slice(4);
+
+app.get('/challenges', function(req, res) {
+  if (req.query.next) {
+    var heldList = storedList.splice(0,2);
+    res.json(heldList);
+  } else {
+    var list = challenges.slice(0,4);
+    res.json(list);
+  // var list = [];
+  // for (var i = 0; i < 4; i++) {
+  //   list.push(challenges[i]);
+  // }
+  }
+})
 // Dynamic Routes
 
 
