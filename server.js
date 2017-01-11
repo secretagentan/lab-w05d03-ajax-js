@@ -24,10 +24,6 @@ app.get('/challenges', function(req, res) {
   } else {
     var list = challenges.slice(0,4);
     res.json(list);
-  // var list = [];
-  // for (var i = 0; i < 4; i++) {
-  //   list.push(challenges[i]);
-  // }
   }
 })
 // Dynamic Routes
