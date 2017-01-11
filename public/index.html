@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <h1>Hi there!</h1>
+
+    <img src="https://cdn.meme.am/cache/instances/folder739/500x/51321739.jpg">
+
+    <ol>
+      <li>Add an event listener to <code>button#ready</code> so that when it's clicked you perform an AJAX GET request to '/challenges'</li>
+      <li>When the server receives a GET request to <code>/challenges</code> send back an array of the first FOUR challenges as JSON.</li>
+      <li>Render the response as an ordered list inside <code>div#challenges</code></li>
+    </ol>
+
+    <button id="ready">Ready?</button>
+    <div id="challenges"></div>
+
+  </div>
+
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>
