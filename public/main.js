@@ -86,11 +86,15 @@ var decodedSix = window.atob('SW4gPGNvZGU+cHVibGljL21haW4uanM8L2NvZGU+IHVwZGF0ZS
 var decodedEight = window.atob('T24gPGNvZGU+c2VydmVyLmpzPC9jb2RlPiwgaGFuZGxlIEdFVCByZXF1ZXN0cyB0byA8Y29kZT4vY2hhbGxlbmdlcy9baWRdPC9jb2RlPiBhbmQgcmV0dXJuIE9OTFkgdGhhdCBjaGFsbGVuZ2UgYXMgSlNPTg==');
 var decodedNine = window.atob('UmVhZCB0aHJvdWdoIGh0dHBzOi8vZXhwcmVzc2pzLmNvbS9lbi9ndWlkZS91c2luZy10ZW1wbGF0ZS1lbmdpbmVzLmh0bWw=');
 var decodedTen = window.atob('UmVzZWFyY2ggLSB3aGF0IGlzIHRoZSBkZWZhdWx0IGRpcmVjdG9yeSB3aGVyZSBleHByZXNzIGxvb2tzIGZvciB0ZW1wbGF0ZSBmaWxlcz8=');
+var decodedEleven = window.atob('SW5zdGFsbCBhbmQgc2F2ZSB0aGUgbW9kdWxlICJlanMi');
+var decodedTwelve = window.atob('Q29uZmlndXJlIHRoZSBleHByZXNzIHZpZXcgZW5naW5lIHRvIHVzZSAiZWpzIg==');
 
 console.log(decodedSix);
 console.log(decodedEight);
 console.log(decodedNine);
 console.log(decodedTen);
+console.log(decodedEleven);
+console.log(decodedTwelve);
 
 try {
   window.atob('hello');
