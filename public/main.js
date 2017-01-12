@@ -9,7 +9,7 @@ function handleButton(evt) {
   $.get('/challenges', function(res) {
     var $list = '<ul>';
     res.forEach( function(val) {
-      return $list += '<li>' + val.id + '. ' + val.body + '</li>';
+      return $list += '<li><a href="/challenges/"' + val.id + '/">' + val.body + '</a></li>';
     })
     $list += '</ul>';
     $challenge.append($list);
@@ -21,10 +21,10 @@ function handleButton(evt) {
 $button.click(handleButton);
 
 function createElems() {
-  $('.wrapper').append("<button id='next'>Next</button>");
   $challenge.after("<div id='moar'></div>");
-  $nextButton = $('#next');
   $moar = $('#moar');
+  $moar.append("<button id='next'>Next</button>");
+  $nextButton = $('#next');
   $moar.on('click', secret);
 }
 
@@ -40,7 +40,7 @@ function handleRes(res) {
 function concat(arr) {
   var $list = '<ul>';
   arr.forEach(function(val){
-    return $list += '<li>' + val.id + '. ' + val.body + '</li>';
+    return $list += '<li><a href="/challenges/' + val.id + '/">' + val.body + '</a></li>';
   })
   $list += '</ul>';
   return $list;
@@ -73,7 +73,7 @@ function secret(evt) {
       },
       success: function(msg) {
         console.log(msg);
-        $moar.children().eq(2).append('<li style="color:green"> Hey! ' + msg.data.hint + '<br>' + msg.data.message + '</li>');
+        $moar.children().eq(2).append('<li style="color:limegreen"> Hey! ' + msg.data.hint + '<br>' + msg.data.message + '</li>');
       },
       error: function(msg) {
         console.log('failure');

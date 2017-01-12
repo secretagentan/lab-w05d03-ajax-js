@@ -17,6 +17,7 @@ var challenges = require('./lib/challenges');
 // GET '/challenges' =>
 var storedList = challenges.slice(4);
 
+// Dynamic Routes
 app.get('/challenges', function(req, res) {
   if (req.query.next) {
     var heldList = storedList.splice(0,2);
@@ -26,8 +27,11 @@ app.get('/challenges', function(req, res) {
     res.json(list);
   }
 })
-// Dynamic Routes
 
+app.get('/challenges/:placeID', function(req, res){
+  var place = req.params.placeID;
+  res.json( challenges[place - 1]);
+})
 
 var port = 3000;
 app.listen(port, function(){
